@@ -1,0 +1,83 @@
+.skelbimas {
+    margin: 10px auto;
+    max-width: 1000px;
+    width: 90%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 1px solid rgba(41, 62, 131, 0.1);
+    margin-bottom: 50px;
+  }
+  
+  .post {
+    margin: 30px;
+  }
+  
+  .card-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    max-width: 90%;
+  }
+  
+  .card-main > input {
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .quill {
+    height: 300px;
+    width: 90%;
+    margin: 10px auto;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .butt {
+    margin: 10px;
+    width: 100px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .card-main > input {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 5px 0;
+    }
+  
+    .quill {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 620px) {
+    .card-main {
+      max-width: 95%;
+    }
+  
+    .card-main > input {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 5px 0;
+    }
+  
+    .quill {
+      height: 300px;
+    }
+  }
+  
+
+  @media (max-width: 483px) {
+    .quill {
+        margin-bottom: 40px;
+    }
+  }

@@ -1,0 +1,41 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  margin-left: 30px;
+}
+
+.contacts {
+  flex: 1;
+}
+
+.contacts h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.contacts p {
+  margin: 5px 0;
+}
+
+.logo svg {
+  width: 40px;
+  height: 40px;
+  fill: #1c3988;
+}
+
+.logo svg:hover {
+  fill: #ff0000;
+}
+
+@media all and (max-width:420px) {
+  .logo{
+    margin: 0px;
+  }
+}

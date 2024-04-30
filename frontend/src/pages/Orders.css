@@ -1,0 +1,37 @@
+.oders-page{
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: start;
+  min-height: 58vh;
+}
+
+.order{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px gray;
+  align-items: center;
+  padding: 15px;
+  width: 300px;
+  height: 300px;
+  justify-content: space-between;
+  
+}
+
+.patvirtinimo-mygtukai{
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  gap: 7px;
+  width: 90%;
+}
+
+.order .viesbutis{
+  width: 250px;
+  word-wrap: break-word;
+  text-align: center;
+}
