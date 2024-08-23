@@ -1,13 +1,12 @@
 import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
-import usersRoutes from "./routes/users.js";
+import createUserRoute from "./routes/users.js";
 import housesRoutes from "./routes/houseRoute.js";
-import adminRoutes from './routes/adminRoutes.js'
+import adminRoutes from "./routes/adminRoutes.js";
 import path from "path";
 import userRoutes from "./routes/userRoutes.js";
-
-dotenv.config();
 
 const app = express();
 const __dirname = path.resolve();
@@ -18,16 +17,16 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Routes
-app.use("/api", usersRoutes);
+app.use("/api", createUserRoute);
 app.use("/api", housesRoutes);
-app.use('/admin', adminRoutes)
-app.use("/api", userRoutes)
+app.use("/admin", adminRoutes);
+app.use("/api", userRoutes);
 
 mongoose
-  .connect(process.env.URI)
+  .connect(process.env.MONGO_CONNECT)
   .then(() => {
     app.listen(4000, () => {
       console.log("Listening on port", 4000);
